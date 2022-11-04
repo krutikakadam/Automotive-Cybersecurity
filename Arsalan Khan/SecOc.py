@@ -9,9 +9,7 @@ def generateMAC(msg,key,freshnessValue):
 	return mac
 
 def generateSecurePDU(msg,freshnessValue,mac):
-
 	SecurePDU = bytes(msg,'utf-8') + bytes(freshnessValue,'utf-8')+mac.digest()
-	print(SecurePDU)
 	return SecurePDU
 
 def generateSecretKey():
